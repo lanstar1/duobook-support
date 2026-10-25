@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>듀오북 개인정보처리방침</title>
+<title>DuoBook 개인정보처리방침</title>
 <style>
   :root { color-scheme: light dark; --fg:#1d1d1f; --muted:#6e6e73; --bg:#fff; --line:#e5e5ea; }
   @media (prefers-color-scheme: dark) { :root { --fg:#f5f5f7; --muted:#a1a1a6; --bg:#111; --line:#2c2c2e; } }
@@ -16,11 +16,11 @@
 </head>
 <body>
 <main>
-<h1>듀오북 개인정보처리방침</h1>
+<h1>DuoBook 개인정보처리방침</h1>
 <p class="muted">시행일: 2026년 10월 25일</p>
 
 <h2>1. 수집하는 개인정보</h2>
-<p>듀오북(DuoBook)은 개인정보를 수집하지 않습니다. 회원 가입·로그인이 없고, 광고·분석 도구나 외부 서버를 쓰지 않습니다.</p>
+<p>DuoBook(듀오북)은 개인정보를 수집하지 않습니다. 앱 자체의 회원 가입이 없고, 광고·분석 도구나 개발자 서버를 쓰지 않습니다.</p>
 
 <h2>2. 앱이 다루는 정보와 저장 위치</h2>
 <ul>
@@ -33,19 +33,28 @@
 <h2>3. 로컬 네트워크 권한</h2>
 <p>같은 네트워크의 컴퓨터를 찾고(Bonjour) 연결하기 위해 로컬 네트워크 권한을 요청합니다. 이 권한으로 얻은 정보는 연결 목록을 보여 주는 데에만 쓰입니다.</p>
 
-<h2>4. 제3자 제공·위탁</h2>
-<p>없습니다.</p>
+<h2>4. Tailscale 연결(선택)</h2>
+<p>사용자가 앱 안에서 'Tailscale로 로그인'을 하면, 이 아이폰을 사용자의 Tailscale 네트워크(tailnet)에 기기로 등록하기 위해 앱이 Tailscale Inc.의 서버와 통신합니다.</p>
+<ul>
+  <li>로그인은 Tailscale 웹 페이지에서 하며, 앱은 Tailscale 계정 암호를 보거나 저장하지 않습니다.</li>
+  <li>Tailscale에는 기기 등록에 필요한 정보(기기 이름 'duobook-iphone', 운영체제, 네트워크 주소, 기기 키)가 전달되며, Tailscale의 <a href="https://tailscale.com/privacy-policy">개인정보처리방침</a>에 따라 처리됩니다.</li>
+  <li>원격 화면·소리·입력은 Tailscale의 종단 간 암호화(WireGuard)로 사용자의 기기 사이에서만 오갑니다. 직접 연결이 안 될 때 Tailscale 중계 서버를 거칠 수 있지만, 암호화되어 있어 내용을 볼 수 없습니다.</li>
+  <li>앱은 Tailscale에 진단 로그를 보내지 않습니다. 로그인 정보는 이 기기 안에만 저장됩니다.</li>
+</ul>
 
-<h2>5. 정보 삭제</h2>
-<p>앱에서 저장한 컴퓨터를 지우거나 앱을 삭제하면 기기에 저장된 모든 정보(키체인의 암호 포함)가 삭제됩니다.</p>
+<h2>5. 제3자 제공·위탁</h2>
+<p>개발자가 제3자에게 제공하는 정보는 없습니다. Tailscale을 쓰는 경우 위 4번처럼 사용자가 직접 로그인한 Tailscale 서비스가 기기 등록 정보를 처리합니다.</p>
 
-<h2>6. 아동</h2>
+<h2>6. 정보 삭제</h2>
+<p>앱에서 저장한 컴퓨터를 지우거나 앱을 삭제하면 기기에 저장된 모든 정보(키체인의 암호 포함)가 삭제됩니다. 'Tailscale 로그아웃'을 누르면 이 기기를 tailnet에서 빼고 로그인 정보를 지웁니다. 등록된 기기 기록은 Tailscale 관리 화면에서도 지울 수 있습니다.</p>
+
+<h2>7. 아동</h2>
 <p>앱은 아동을 포함한 누구의 개인정보도 수집하지 않습니다.</p>
 
-<h2>7. 문의</h2>
+<h2>8. 문의</h2>
 <p>문의는 <a href="https://github.com/lanstar1/duobook-support/issues">지원 페이지(GitHub Issues)</a>에 남겨 주세요.</p>
 
-<h2>8. 변경</h2>
+<h2>9. 변경</h2>
 <p>이 방침이 바뀌면 이 페이지에 시행일과 함께 게시합니다.</p>
 
 <hr>
@@ -57,6 +66,7 @@
   <li>Computer names, addresses, ports and user names you enter are stored only on your device. Passwords are stored only in your device's Keychain and are sent only to the computer you connect to, using the VNC / Apple Remote Desktop authentication methods.</li>
   <li>Remote screen images, audio and keyboard/trackpad input travel directly between your iPhone and the computer you choose. They are never sent to the developer or any third party.</li>
   <li>The Local Network permission is used only to discover and connect to computers on your network.</li>
+  <li>Optional Tailscale sign-in: if you sign in to Tailscale inside the app, the app talks to Tailscale Inc.'s servers to add this iPhone to your tailnet. You sign in on Tailscale's web page; the app never sees your Tailscale password. Device registration details (device name, OS, network addresses, device key) are handled under <a href="https://tailscale.com/privacy-policy">Tailscale's privacy policy</a>. Remote sessions are end-to-end encrypted (WireGuard). The app does not send diagnostic logs to Tailscale. "Sign out of Tailscale" removes this device from your tailnet and deletes the sign-in data.</li>
   <li>Deleting a saved computer or the app removes all stored data, including Keychain passwords.</li>
 </ul>
 <p>Questions: <a href="https://github.com/lanstar1/duobook-support/issues">support page (GitHub Issues)</a>.</p>
