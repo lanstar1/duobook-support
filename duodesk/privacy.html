@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DuoDesk 개인정보처리방침</title>
+<style>
+  :root { color-scheme: light dark; --fg:#1d1d1f; --muted:#6e6e73; --bg:#fff; --line:#e5e5ea; }
+  @media (prefers-color-scheme: dark) { :root { --fg:#f5f5f7; --muted:#a1a1a6; --bg:#111; --line:#2c2c2e; } }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.65 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif; }
+  main { max-width:720px; margin:0 auto; padding:40px 16px 64px; }
+  h1 { font-size:28px; margin:0 0 4px; } h2 { font-size:19px; margin:32px 0 8px; }
+  p, li { color:var(--fg); } .muted { color:var(--muted); font-size:14px; }
+  hr { border:0; border-top:1px solid var(--line); margin:40px 0; }
+</style>
+</head>
+<body>
+<main>
+<h1>DuoDesk 개인정보처리방침</h1>
+<p class="muted">시행일: 2026년 10월 25일</p>
+
+<h2>1. 수집하는 개인정보</h2>
+<p>DuoDesk는 개발자가 개인정보를 수집하지 않습니다. 앱 자체의 회원 가입이 없고, 광고·분석 도구나 개발자 서버를 쓰지 않습니다.</p>
+
+<h2>2. 앱이 다루는 정보와 저장 위치</h2>
+<ul>
+  <li><b>연결할 컴퓨터의 이름·주소·포트·사용자 이름</b>: 사용자가 입력하거나 고른 값으로, 이 기기 안에만 저장됩니다.</li>
+  <li><b>컴퓨터 암호</b>: 이 기기의 키체인(Keychain)에만 저장되며, 연결할 때 사용자의 컴퓨터로만 보내집니다(VNC·애플 원격 데스크톱 인증 방식으로 암호화).</li>
+  <li><b>원격 화면·소리·키보드·터치 입력</b>: 사용자의 아이폰과 사용자가 고른 컴퓨터 사이에서만 오가며, 개발자나 제3자에게 저장되지 않습니다.</li>
+  <li><b>설정</b>: 이 기기 안에만 저장됩니다.</li>
+</ul>
+
+<h2>3. 권한</h2>
+<ul>
+  <li><b>로컬 네트워크</b>: 같은 네트워크의 컴퓨터를 찾고(Bonjour) 연결하는 데에만 씁니다.</li>
+  <li><b>카메라(선택)</b>: 설정에서 '펼친 채 바깥 화면에 노트북 덮개'를 켤 때만 씁니다. iOS는 앱이 카메라를 켜 두었을 때만 펼친 상태의 바깥 화면에 그릴 수 있게 하므로, 그동안 카메라를 가장 낮은 화질로 켜 두고 들어오는 영상은 <b>저장하거나 보내지 않고 바로 버립니다</b>.</li>
+</ul>
+
+<h2>4. Tailscale 연결(선택)</h2>
+<p>사용자가 앱 안에서 'Tailscale로 로그인'을 하면, 이 아이폰을 사용자의 Tailscale 네트워크(tailnet)에 기기로 등록하기 위해 앱이 Tailscale Inc.의 서버와 통신합니다.</p>
+<ul>
+  <li>로그인은 Tailscale 웹 페이지에서 하며, 앱은 Tailscale 계정 암호를 보거나 저장하지 않습니다.</li>
+  <li>Tailscale에는 기기 등록에 필요한 정보(기기 이름 'duodesk-iphone', 운영체제, 네트워크 주소, 기기 키)가 전달되며, Tailscale의 <a href="https://tailscale.com/privacy-policy">개인정보처리방침</a>에 따라 처리됩니다.</li>
+  <li>원격 화면·소리·입력은 Tailscale의 종단 간 암호화(WireGuard)로 사용자의 기기 사이에서만 오갑니다.</li>
+  <li>앱은 Tailscale에 진단 로그를 보내지 않습니다. 'Tailscale 로그아웃'을 누르면 이 기기를 tailnet에서 빼고 로그인 정보를 지웁니다.</li>
+</ul>
+
+<h2>5. 제3자 제공·위탁</h2>
+<p>개발자가 제3자에게 제공하는 정보는 없습니다. Tailscale을 쓰는 경우 위 4번처럼 사용자가 직접 로그인한 Tailscale 서비스가 기기 등록 정보를 처리합니다.</p>
+
+<h2>6. 정보 삭제</h2>
+<p>앱에서 저장한 컴퓨터를 지우거나 앱을 삭제하면 기기에 저장된 모든 정보(키체인의 암호 포함)가 삭제됩니다.</p>
+
+<h2>7. 아동</h2>
+<p>앱은 아동을 포함한 누구의 개인정보도 수집하지 않습니다.</p>
+
+<h2>8. 문의·변경</h2>
+<p>문의는 <a href="https://github.com/lanstar1/duobook-support/issues">GitHub Issues</a>에 남겨 주세요. 이 방침이 바뀌면 이 페이지에 시행일과 함께 게시합니다.</p>
+
+<hr>
+
+<h1>DuoDesk Privacy Policy</h1>
+<p class="muted">Effective October 25, 2026</p>
+<p>DuoDesk does not collect any personal data. There are no accounts, analytics, advertising or developer servers.</p>
+<ul>
+  <li>Computer names, addresses, ports and user names you enter are stored only on your device. Passwords are stored only in your device's Keychain and are sent only to the computer you connect to.</li>
+  <li>Remote screen images, audio and keyboard/touch input travel only between your iPhone and the computer you choose.</li>
+  <li>Local Network is used only to discover and connect to computers on your network.</li>
+  <li>Camera (optional): only when you turn on the "laptop lid on the outer display" setting. iOS lets an app draw on the outer display while unfolded only during camera capture, so the app keeps the camera running at the lowest quality and discards every frame immediately; nothing is stored or sent.</li>
+  <li>Optional Tailscale sign-in: the app talks to Tailscale Inc.'s servers to add this iPhone to your tailnet. You sign in on Tailscale's web page; the app never sees your Tailscale password. Device registration details are handled under <a href="https://tailscale.com/privacy-policy">Tailscale's privacy policy</a>. The app sends no diagnostic logs to Tailscale.</li>
+  <li>Deleting a saved computer or the app removes all stored data, including Keychain passwords.</li>
+</ul>
+<p>Questions: <a href="https://github.com/lanstar1/duobook-support/issues">GitHub Issues</a>.</p>
+</main>
+</body>
+</html>
